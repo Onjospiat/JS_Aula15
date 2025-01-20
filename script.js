@@ -1,8 +1,23 @@
+var language = localStorage.getItem('language',language) || "pt-BR";
+
+function switchLang(){
+    if(language == "pt-BR"){
+        language = "en";
+    }
+    else{
+        language = "pt-BR";
+    }
+    changeText();
+}
+
 function changeText(){
-    var pt = document.getElementsByClassName("pt-BR");
-    var en = document.getElementsByClassName("en");
-    var i=0;
-    if(pt[0].style.display == "none"){
+    let pt = document.getElementsByClassName("pt-BR");
+    let en = document.getElementsByClassName("en");
+    let i=0;
+
+    localStorage.setItem('language', language);
+
+    if(language == "pt-BR"){
         for(i=0;i<pt.length;i++){
             pt[i].style.display = "block";
         }
@@ -24,3 +39,4 @@ function changeText(){
 }
 
 window.changeText = changeText;
+window.switchLang = switchLang;
