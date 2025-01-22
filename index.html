@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <title>Home</title>
     <meta charset="UTF-8" />
@@ -11,14 +11,18 @@
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
   </head>
-  <body>
+  <body onload="changeText()">
     <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-      <a onclick="changeText()">Change Text</a>
+      <a href="/" aria-current="page" class="en">Home</a>
+      <a href="/" aria-current="page" class="pt-BR">Página Inicial</a>
+      <a href="/page2.html" class="en">Other page</a>
+      <a href="/page2.html" class="pt-BR">Outra Página</a>
+      <a onclick="switchLang()" class="pt-BR">PT &#8595;</a>
+      <a onclick="switchLang()" class="en">EN &#8595;</a>
     </nav>
     <main>
-      <h1>Home page</h1>
+      <h1 class="pt-BR">Página inicial</h1><h1 class="en">Home</h1>
+      <p class="pt-BR">Gostei dessa</p><p class="en">I like this.</p>
     </main>
   </body>
 </html>

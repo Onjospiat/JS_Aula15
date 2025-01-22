@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <title>Other page</title>
     <meta charset="UTF-8" />
@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
   </head>
-  <body>
+  <body onload="changeText()">
     <nav>
-      <a href="/">Home</a>
-      <a href="/page2.html" aria-current="page">Other page</a>
+      <a href="/" class="en">Home</a>
+      <a href="/" class="pt-BR">Página Inicial</a>
+      <a href="/page2.html" aria-current="page" class="en">Other page</a>
+      <a href="/page2.html" aria-current="page" class="pt-BR">Outra Página</a>
+      <a onclick="switchLang()" class="pt-BR">PT &#8595;</a>
+      <a onclick="switchLang()" class="en">EN &#8595;</a>
     </nav>
     <main>
-      <h1>My other page</h1>
+      <h1 class="en">My other page</h1><h1 class="pt-BR">Minha outra página</h1>
     </main>
   </body>
 </html>
